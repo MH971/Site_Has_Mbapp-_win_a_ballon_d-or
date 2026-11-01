@@ -82,46 +82,46 @@ footer {
   width: 40px;                     /* Taille des drapeaux */
 }
 
-
+/* ---------- Galerie de miniatures ---------- */
 .galerie {
-  display: flex;                   
-  flex-wrap: wrap;                 
+  display: flex;                   /* Les images sont côte à côte */
+  flex-wrap: wrap;                 /* Passe à la ligne automatiquement */
   gap: 15px;
 }
 
 .galerie figure {
   margin: 0;
-  width: 250px;                    
+  width: 250px;                    /* Même largeur que les images la légende va reste sous la photo et passe à la ligne */
 }
 
 .galerie {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;                       
+  gap: 20px;                       /* les espace entre les photos */
 }
 
 .galerie figure {
   margin: 0;
-  width: 250px;                   
+  width: 250px;                    /* Même largeur que l'image : la légende reste dessous */
 }
 
 .galerie img {
   display: block;
-  width: 100%;                     
-  height: 250px;                   
-  object-fit: cover;               
-  object-position: center top;     
+  width: 100%;                     /* L'image prend toute la largeur de son bloc */
+  height: 250px;                   /* Format carré : coupe moins les photos verticales */
+  object-fit: cover;               /* Recadre sans déformer l'image */
+  object-position: center top;     /* Garde le haut de l'image (le visage) */
   border-radius: 8px;
 }
 
 .galerie figcaption {
   text-align: center;
-  font-size: 0.8em;                
+  font-size: 0.8em;                /* Légende un peu plus petite */
 }
 
-
+/* ---------- Formulaire de contact ---------- */
 form label {
-  display: block;                  
+  display: block;                  /* Chaque label sur sa propre ligne */
   margin-top: 15px;
   font-weight: bold;
 }
@@ -145,63 +145,64 @@ form button {
   cursor: pointer;
 }
 
-
+/* ---------- Version mobile ---------- */
+/* Ces règles s'appliquent que si l'écran fait 600px ou moins */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;        
+    flex-direction: column;        /* Menu vertical sur téléphone */
     gap: 10px;
   }
 
   .galerie figure {
-    width: 100%;                   
+    width: 100%;                   /* Sur téléphone, le bloc prend toute la largeur */
   }
 
   .galerie img {
-    width: 100%;                   
+    width: 100%;                   /* Image sur toute la largeur */
     height: auto;
   }
 }
 
 
-
+/* Titre de Crédits photos seulement */
 .credits {
-  color: #000000d8;                  
+  color: #000000d8;                  /* Couleur du titre */
 }
 
-
+/* ---------- Cartes de la page d'accueil ---------- */
 .cartes {
-  list-style: none;                
+  list-style: none;                /* Enlève les puces */
   padding: 0;
-  display: flex;                  
-  flex-wrap: wrap;                 
+  display: flex;                   /* Les cartes sont côte à côte */
+  flex-wrap: wrap;                 /* Elles passent à la ligne si l'écran est petit */
   gap: 15px;
 }
 
 .cartes li {
-  flex: 1 1 200px;                 
-  background-color: #ffffff;       
-  border: 1px solid #dddddd;      
-  border-radius: 8px;              
+  flex: 1 1 200px;                 /* Chaque carte fait au moins 200px et se partage la largeur */
+  background-color: #ffffff;       /* Fond blanc */
+  border: 1px solid #dddddd;       /* Fin cadre gris */
+  border-radius: 8px;              /* Coins arrondis */
   padding: 15px;
 }
 
 .cartes h3 {
-  margin-top: 0;                   
+  margin-top: 0;                   /* Colle le titre en haut de la carte */
 }
 
 .cartes a {
-  color: #0a1f44;                 
+  color: #0a1f44;                  /* Lien en bleu foncé, lisible sur fond blanc */
   font-weight: bold;
 }
 
 .uppercase {
-    text-transform: uppercase;   
+    text-transform: uppercase;   /* Texte en uppercase (Biographie) */
 }
 
-
+/* ---------- Style pour les citations ---------- */
 .citation-mbappe {
   background-color: #ffffff;
-  border-left: 5px solid #1032c8;   
+  border-left: 5px solid #1032c8;   /* Barre rouge sur le côté gauche */
   margin: 25px 0;
   padding: 15px 20px;
   border-radius: 0 8px 8px 0;
@@ -211,7 +212,7 @@ form button {
 .citation-mbappe p {
   font-style: italic;
   font-size: 1.1em;
-  color: #000000;                   
+  color: #000000;                   /* Texte en bleu foncé */
   margin: 0 0 8px 0;
 }
 
@@ -219,31 +220,31 @@ form button {
   display: block;
   font-weight: bold;
   font-style: normal;
-  color: #344e4efa;                   
+  color: #344e4efa;                   /* Nom de Kylian Mbappé en couleur */
   text-align: right;
 }
 
- 
+ /* ---------- Image du CV (pages CV) ---------- */
 .cv-image {
-  max-width: 100%;                 
-  height: auto;                    
+  max-width: 100%;                 /* L'image ne dépasse jamais la largeur de l'écran */
+  height: auto;                    /* Garde les proportions */
   border: 1px solid #cccccc;
 }
 
-
+/* ---------- Illustrations dans les pages correction pour les bug sur mobile ---------- */
 .illustration {
-  margin: 20px 0;                  
-  max-width: 500px;               
+  margin: 20px 0;                  /* Espace au-dessus et en dessous (enlève aussi la marge par défaut de figure) */
+  max-width: 500px;                /* Largeur maximale de l'illustration */
 }
 
 .illustration img {
-  max-width: 100%;                 
-  height: auto;                    
+  max-width: 100%;                 /* L'image ne dépasse jamais son bloc */
+  height: auto;                    /* Garde les proportions */
   border-radius: 8px;
 }
 
 .illustration figcaption {
-  font-size: 0.9em;
-  color: #555555;
-  margin-top: 5px;
+  font-size: 0.9em;                 /* Réduit légèrement la taille du texte de la légende */
+  color: #555555;                 /* Applique une couleur grise*/
+  margin-top: 5px;                  /* Ajoute un espacement au-dessus de la légende pour que l'image soit détachée */
 }
